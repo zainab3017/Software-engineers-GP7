@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+#gameArea {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #444;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #00f;
+    top: 180px;
+    left: 180px;
+    z-index: 10;
+}
+
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f00;
+    z-index: 9;
+}
+
+#enemy1 {
+    top: 0;
+    left: 0;
+}
+
+#enemy2 {
+    bottom: 0;
+    right: 0;
+}
