@@ -10,76 +10,77 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: #E3F2FD;
+  min-height: 100vh;/* Full height viewport */
+  background: #E3F2FD; /* Light blue background color */
 }
 .wrapper {
-  width: 65vmin;
+  width: 65vmin;/* Responsive size based on viewport */
   height: 70vmin;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
-  border-radius: 5px;
-  background: #293447;
-  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+  border-radius: 5px;/* Rounded corners */
+  background: #293447;/* Dark background for the game wrapper */
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);/* Soft shadow effect */
 }
+
 .game-details {
-  color: #B8C6DC;
+  color: #B8C6DC;/* Light text color */
   font-weight: 500;
-  font-size: 1.2rem;
-  padding: 20px 27px;
+  font-size: 1.2rem;/* Medium font size */
+  padding: 20px 27px;/* Padding around score display */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;/* Align score elements */
 }
 .play-board {
   height: 100%;
   width: 100%;
-  display: grid;
-  background: #212837;
-  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  display: grid;/* Create grid for snake movement */
+  background: #212837;/* Darker background for the play area */
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);/* 30x30 grid */
 }
 .play-board .food {
-  background: #FF003D;
+  background: #FF003D;/* Red color for the food */
 }
 .play-board .head {
-  background: #60CBFF;
+  background: #60CBFF;/* Light blue color for the snake */
 }
 .controls {
-  display: none;
+  display: none;/* Hidden by default for non-mobile devices */
   justify-content: space-between;
 }
 .controls i {
   padding: 25px 0;
   text-align: center;
-  font-size: 1.3rem;
-  color: #B8C6DC;
-  width: calc(100% / 4);
+  font-size: 1.3rem;/* Icon size */
+  color: #B8C6DC; /* Light text color */
+  width: calc(100% / 4);/* Each icon takes 1/4th of the control width */
   cursor: pointer;
-  border-right: 1px solid #171B26;
+  border-right: 1px solid #171B26; /* Divider between icons */
 }
 @media screen and (max-width: 800px) {
   .wrapper {
     width: 90vmin;
-    height: 115vmin;
+    height: 115vmin;/* Adjust size for smaller screens */
   }
   .game-details {
-    font-size: 1rem;
+    font-size: 1rem;/* Smaller font size */
     padding: 15px 27px;
   }
   .controls {
-    display: flex;
+    display: flex;/* Show controls on small screens */
   }
   .controls i {
-    padding: 15px 0;
-    font-size: 1rem;
+    padding: 15px 0;/* Smaller padding for icons */
+    font-size: 1rem; /* Smaller icon size */
   }
   .game-title {
     color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2rem;/* Adjusted font size */
+    font-weight: 600;/* Bold title */
   }
   
 }

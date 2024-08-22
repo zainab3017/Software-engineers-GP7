@@ -1,7 +1,10 @@
+// Select the play board, score elements, and control buttons
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
+
+// Initialize game variables
 let gameOver = false;
 let foodX, foodY;
 let snakeX = 5, snakeY = 5;
@@ -9,20 +12,26 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let score = 0;
-// Getting high score from the local storage
+// Retrieve high score from local storage or initialize it to 0
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
+
+// Function to randomly place food on the board
 const updateFoodPosition = () => {
     // Passing a random 1 - 30 value as food position
     foodX = Math.floor(Math.random() * 30) + 1;
     foodY = Math.floor(Math.random() * 30) + 1;
 }
+
+// Function to handle game over scenario
 const handleGameOver = () => {
     // Clearing the timer and reloading the page on game over
-    clearInterval(setIntervalId);
+    clearInterval(setIntervalId);// Stop the game loop
     alert("Game Over! Press close to replay...");
-    location.reload();
+    location.reload();// Reload the game
 }
+
+// Function to change the snake's direction based on key press
 const changeDirection = e => {
     // Changing velocity value based on key press
     if(e.key === "ArrowUp" && velocityY != 1) {
@@ -41,6 +50,7 @@ const changeDirection = e => {
 }
 // Calling changeDirection on each key click and passing key dataset value as an object
 controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
+// Main game loop
 const initGame = () => {
     if(gameOver) return handleGameOver();
     let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
@@ -67,6 +77,7 @@ const initGame = () => {
     if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
         return gameOver = true;
     }
+        // Check if the snake hits itself
     for (let i = 0; i < snakeBody.length; i++) {
         // Adding a div for each part of the snake's body
         html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
@@ -75,8 +86,11 @@ const initGame = () => {
             gameOver = true;
         }
     }
+        // Render the snake and food on the board
     playBoard.innerHTML = html;
 }
+
+// Initialize food position and start the game loop
 updateFoodPosition();
-setIntervalId = setInterval(initGame, 100);
-document.addEventListener("keyup", changeDirection);
+setIntervalId = setInterval(initGame, 100);// Run the game loop every 100ms
+document.addEventListener("keyup", changeDirection);// Listen for key presses to change direction
