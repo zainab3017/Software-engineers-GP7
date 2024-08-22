@@ -1,67 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> HTML Exercise G7</title>
+
+    <title>HTML Exercise G7</title>
+    
+    <!-- CSS styling for the webpage -->
+    <style>
+        /* Basic styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Centered and styled headers */
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Centered paragraph text with subtle color */
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        /* Table styling for structure and aesthetics */
+        table {
+            width: 80%; /* Reduced width to center table on larger screens */
+            margin: 20px auto; /* Center the table on the page */
+            border-collapse: collapse;
+           
+        }
+        
+        /* Styles for table cells and headers */
+        th, td {
+            border: 1px solid #dddddd; /* Light border around cells */
+            text-align: left;
+            padding: 12px; /* Slightly increased padding for readability */
+        }
+        
+        /* Header background color and text color */
+        th {
+            background-color: #4CAF50; /* Green background for headers */
+            color: white; /* White text for headers */
+        }
+        
+        /* Font size for table cells */
+        td {
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>HTML Exersice</h1>
-<p>The goal of this exercise is to practice the html.</p>
-<style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
+    <!-- Main header of the webpage -->
+    <h1>HTML Exercise G7</h1>
     
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    </style>
-    </head>
-    <body>
-    
-    <h2>Zainab's Company Table</h2>
-    
-    <table>
-      <tr>
-        <th>Employee Name</th>
-        <th>Job Title</th>
-        <th>Contact</th>
-      </tr>
-      <tr>
-        <td>Zainab Alhammadi</td>
-        <td>CEO</td>
-        <td>05000000874</td>
-      </tr>
-      <tr>
-        <td>Reem</td>
-        <td>Finance</td>
-        <td>05976521333</td>
-      </tr>
-      <tr>
-        <td>Ahmed</td>
-        <td>General Services</td>
-        <td>055776213434</td>
-      </tr>
-      <tr>
-        <td>Rashid</td>
-        <td>HR </td>
-        <td>05088676545</td>
-      </tr>
-      <tr>
-        <td>Mohammed</td>
-        <td>Project Engineer/td>
-        <td>05083243435</td>
-      </tr>
+    <!-- Brief description of the exercise -->
+    <p>The goal of this exercise is to practice HTML.</p>
 
+    <!-- Subheader for the table section -->
+    <h2>Zainab's Company Employee Table</h2>
+
+    <!-- Table containing employee information -->
+    <table>
+        <!-- Table header row -->
+        <tr>
+            <th>Employee Name</th>
+            <th>Job Title</th>
+            <th>Contact</th>
+        </tr>
+        <!-- First employee row -->
+        <tr>
+            <td>Zainab Alhammadi</td>
+            <td>CEO</td>
+            <td>050-000-0874</td>
+        </tr>
+        <!-- Second employee row -->
+        <tr>
+            <td>Reem</td>
+            <td>Finance</td>
+            <td>059-765-2133</td>
+        </tr>
+        <!-- Third employee row -->
+        <tr>
+            <td>Ahmed</td>
+            <td>General Services</td>
+            <td>055-776-2134</td>
+        </tr>
+        <!-- Fourth employee row -->
+        <tr>
+            <td>Rashid</td>
+            <td>HR</td>
+            <td>050-886-7654</td>
+        </tr>
+        <!-- Fifth employee row -->
+        <tr>
+            <td>Mohammed</td>
+            <td>Project Engineer</td>
+            <td>050-832-4345</td>
+        </tr>
     </table>
-    
+
 </body>
 </html>
