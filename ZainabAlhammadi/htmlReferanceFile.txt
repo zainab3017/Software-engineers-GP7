@@ -1,0 +1,116 @@
+HTML Basics Reference
+
+1. HTML Document Structure
+    !DOCTYPE html>
+<html>
+<head>
+    <title>Your Page Title</title>
+</head>
+<body>
+    <!-- Your content goes here -->
+</body>
+</html>
+
+    <!DOCTYPE html>: Declares the document type and version of HTML.
+
+    <html>: Root element of the HTML document.
+
+    <head>: Contains meta-information like the title, styles, and links to scripts.
+
+    <title>: Sets the title of the webpage, shown in the browser tab.
+
+    <body>: Contains the visible content of the webpage.
+
+
+
+2. Basic HTML Tags
+    Headings: Used for titles and subtitles.
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    Paragraph: Used for blocks of text.
+    <p>This is a paragraph.</p>
+
+    Links: Used to create hyperlinks.
+    <a href="https://www.example.com">Visit Example</a>
+
+   Images: Used to embed images.
+   <img src="image.jpg" alt="Description of image">
+
+    Lists:
+    <img src="image.jpg" alt="Description of image">
+
+    Unordered List (Bulleted)
+    <ul>
+        <li>Item 1</li>
+         <li>Item 2</li>
+    </ul>
+
+    Ordered List (Numbered)
+    <ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+    </ol>
+
+3. Attributes
+    HTML elements can have attributes that provide additional information about the element.
+    <a href="https://www.example.com" target="_blank">Open Link in New Tab</a>
+    <img src="image.jpg" alt="Description of image" width="300" height="200">
+
+4. Formatting Text
+    Bold: <b> or <strong>
+    <b>This is bold text</b>
+
+
+    Italic: <i> or <em>
+    <i>This is italic text</i>
+
+    Underline: <u>
+    <u>This text is underlined</u>
+
+5. Forms
+    Used for user input.
+    <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    
+        <input type="submit" value="Submit">
+    </form>
+
+6. Tables
+    Organizes data in rows and columns.
+
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+         <td>Data 1</td>
+         <td>Data 2</td>
+        </tr>
+    </table>
+
+
+7. Comments
+    Used to add notes within the code that won’t be displayed on the webpage.
+    <!-- This is a comment -->
+
+8. HTML Links to Other Resources
+    CSS: For styling your HTML elements.
+    <link rel="stylesheet" href="styles.css">
+
+    JavaScript: For adding interactivity.
+    <script src="script.js"></script>
+    
+9. Common Entities
+    Space: &nbsp;
+    Less Than: &lt;
+    Greater Than: &gt;
+    Ampersand: &amp;
+
+
