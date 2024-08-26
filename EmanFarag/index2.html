@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PRACTICE</title>
+</head>
+<!--   * added a simple background image locally as design *
+         plus I changed font type and aligning text center -->
+<style>
+body {
+    font-family:   'Times New Roman', Times, serif;
+    background-image: url('simple-pattern.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+</style>
+
+<body>
+  <!-- 
+  ** I used Div and gave each div a class name to make styling easier **
+  *I used two ways of styling as a single element & within an attribute*
+  1) adding shadow to headtitle with h1 attribute
+  2) adding h3 titles
+  3) using paragraph and break <br> attributes in my text
+  4) using link and make it clear using highligh  (mark attribute) and bold 
+  5) used a horizantal line to divide the two titles.
+  6) added a 2 column and 1 row table 
+  7) added two ways to show images in html (locally and online) -->
+
+<style>
+ .title{
+  text-shadow:rgb(245, 67, 12) 1px 0 10px;
+}
+.contents{
+              background-color:whitesmoke;
+}
+.horizontal_line {
+            width: 100%;
+            height: 5px;
+            border-top: 5px dotted rgb(204, 193, 193);
+            line-height: 80%;
+}
+table, th, td {
+            border: 1px solid black;
+  }
+  th{ 
+  text-align: center;
+  padding: 8px;
+  color: whitesmoke;
+  text-shadow:  0 0 3px black;
+  background-color: rgb(245, 67, 12) ;
+}
+
+</style>
+
+<div class="Con-MAIN">
+     
+  <div class="title">     
+        <h1>Everthing new about HTML</h1>
+  </div>
+
+  <div class="contents">
+    <h3>Adding links</h3>
+
+      <div class="Con-links"> 
+          HTML is the standard markup language for Web pages.<br>
+        You can use W3schools website for <a style="font-weight: bold; color: #16dada;" href="https://www.w3schools.com/html/html_basic.asp"> <mark>HTML</mark></a> basics
+        whiccdh is optimized for learning and training.
+      </div>
+
+      <div class="Con-table">
+          <br>
+      <div class="horizontal_line"></div>
+        <h3>Adding images and a table</h3>
+        <table>
+            <tr>
+              <th>Locally</th>
+              <th>Sourced from Website</th>
+            </tr>
+            <tr>
+              <td><img src="html.png" alt="HTML logo"></td>
+              <td> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5K08rKxUEHZsgxTHElnQc6bFEmuVzD6FUg&s" alt="HTML Logo"></td>
+              
+            </tr>
+        </table>
+      </div>
+
+        </div>
+          </div>
+</body>
+</html>
