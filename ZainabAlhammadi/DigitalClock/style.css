@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.theme-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.theme-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .clock-container {
+    background-color: #f9f9f9;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-theme .clock-container {
+    background-color: #444444;
+}
+
+/* Colorful Theme */
+body.colorful-theme {
+    background-color: #ffcc00;
+    color: #000000;
+}
+
+.colorful-theme .clock-container {
+    background-color: #ff9900;
+}
+.format-toggle {
+    margin-top: 20px;
+}
+
+.format-toggle button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.format-toggle button:hover {
+    opacity: 0.8;
+}
+
