@@ -1,110 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-    <title>HTML Exercise G7</title>
-    
-    <!-- CSS styling for the webpage -->
-    <style>
-        /* Basic styles for the body */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* Centered and styled headers */
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        /* Centered paragraph text with subtle color */
-        p {
-            text-align: center;
-            color: #555;
-        }
-
-        /* Table styling for structure and aesthetics */
-        table {
-            width: 80%; /* Reduced width to center table on larger screens */
-            margin: 20px auto; /* Center the table on the page */
-            border-collapse: collapse;
-           
-        }
-        
-        /* Styles for table cells and headers */
-        th, td {
-            border: 1px solid #dddddd; /* Light border around cells */
-            text-align: left;
-            padding: 12px; /* Slightly increased padding for readability */
-        }
-        
-        /* Header background color and text color */
-        th {
-            background-color: #4CAF50; /* Green background for headers */
-            color: white; /* White text for headers */
-        }
-
-
-        
-        /* Font size for table cells */
-        td {
-            font-size: 14px;
-        }
-    </style>
+<style>
+table, th, td {
+    border: 5px solid rgb(224, 46, 46);
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 6px solid #060606;
+    border-top: 6px solid #060606 ;
+}
+</style>
 </head>
 <body>
 
-    <!-- Main header of the webpage -->
-    <h1>HTML Exercise G7</h1>
-    
-    <!-- Brief description of the exercise -->
-    <p>The goal of this exercise is to practice HTML.</p>
+<h2>Cell that spans two columns</h2>
+<p>To make a cell span more than one column, use the colspan attribute.</p>
 
-    <!-- Subheader for the table section -->
-    <h2>Zainab's Company Employee Table</h2>
-
-    <!-- Table containing employee information -->
-    <table>
-        <!-- Table header row -->
-        <tr>
-            <th>Employee Name</th>
-            <th>Job Title</th>
-            <th>Contact</th>
-        </tr>
-        <!-- First employee row -->
-        <tr>
-            <td>Zainab Alhammadi</td>
-            <td>CEO</td>
-            <td>050-000-0874</td>
-        </tr>
-        <!-- Second employee row -->
-        <tr>
-            <td>Reem</td>
-            <td>Finance</td>
-            <td>059-765-2133</td>
-        </tr>
-        <!-- Third employee row -->
-        <tr>
-            <td>Ahmed</td>
-            <td>General Services</td>
-            <td>055-776-2134</td>
-        </tr>
-        <!-- Fourth employee row -->
-        <tr>
-            <td>Rashid</td>
-            <td>HR</td>
-            <td>050-886-7654</td>
-        </tr>
-        <!-- Fifth employee row -->
-        <tr>
-            <td>Mohammed</td>
-            <td>Project Engineer</td>
-            <td>050-832-4345</td>
-        </tr>
-    </table>
-
+<table style="width:100%">
+    <colgroup>
+        <col span="3" style="background-color: #D6EEEE">
+        <col span="5" style="background-color: pink">
+      </colgroup>
+    <tr style="hover background-color: #380906;" >
+    <th colspan="4">Name</th>
+    <th colspan="4">Age</th>
+    </tr>
+    <tr style="hover background-color: display: ;;">
+    <td rowspan="2">Jill</td>
+    <td>Smith</td>
+    <td>43</td>
+    <td>44</td>
+    <td>45</td>
+    <td>46</td>
+    <td>47</td>
+    <td>48</td>
+    <td>49</td>
+    <td>50</td>
+    <td>60</td>
+    </tr>
+    <tr style="align-content: center;">
+    <td rowspan="2">Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+    <td>550</td>
+    <td>600</td>
+    </tr>
+    <tr style="align-content: center;">
+    <td >Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+    <td>550</td>
+    <td>600</td>
+</tr>
+<tr style="align-content: center;">
+    <td >Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+    <td>550</td>
+    <td>600</td>
+</tr>
+<tr style="align-content: center;">
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>57</td>
+    <td>550</td>
+    <td>600</td>
+</tr>
+</table>
 </body>
 </html>
