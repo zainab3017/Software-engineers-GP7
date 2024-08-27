@@ -1,28 +1,100 @@
 body {
-    font-family:   sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("flower.png");
     background-color: #d186a5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 3%;
+    overflow: hidden;
 }
+.main {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
 
 .container {
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(149, 115, 212, 0.1);
     padding: 20px;
-    width: 500px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 20px;
     text-align: center;
-    color:  #b93959;
+    color:  white;
+    text-shadow: #b4415a 3px 0 6px;
 
 }
+#organizing {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-column {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-right: 3%
+}
+.left-column div+div {
+    margin-top: 30px;
+}
+
+#box1  {
+    flex-grow: 1;
+    margin: 0 8px;
+    border: solid 5px #f5bfd4;
+    margin: 2%;
+}
+
+#add {
+    margin: 5%
+}
+
+.middle-column {
+margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-right: 3%
+}
+
+#box2 {
+    flex-grow: 1;
+    margin: 0 8px;
+    border: solid 5px #f5bfd4;
+    margin: 3%;
+}
+#box3 {
+    flex-grow: 1;
+    margin: 0 8px;
+    border: solid 5px #f5bfd4;
+    margin: 2%;
+}
+.right-column div+div {
+    margin-top: 30px;
+}
+
 
 #taskInput {
     width: calc(82% - 40px);
@@ -33,21 +105,20 @@ h1 {
 }
 
 #addTaskBtn {
-    width: calc(20% - 20px);
-    padding: 8px 10px;
+    width: calc(10% - 10px);
+    padding: 6px;
     border: none;
     border-radius: 2px;
-    background-color: #b93959;
+    background-color: #fa7d98;
     border:1px solid #ddd;
     color: white;
     cursor: pointer;
-    font-size: large;
 }
 
 #addTaskBtn:hover {
     background-color: white;
-    color: #b93959;
-    border: 1px solid #b93959;
+    color: #fa7d98;
+    border: 1px solid #fa7d98;
 }
 
 ul {
