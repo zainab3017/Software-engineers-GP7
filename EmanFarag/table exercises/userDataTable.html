@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <!-- why border works like that in td and th??? --> 
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 60%;
+      margin-left:auto;
+      margin-right:auto; 
+      border-style: double;
+
+    }
+
+    td, th {
+      border: 1px d #000000;
+      border-style: double;
+      text-align: center;
+      padding: 15px;
+
+    }
+    
+    </style>
+<body>
+
+
+<table>
+    <colgroup>
+        <col span="1" style="background-color: #c9c9c9">
+        <col span="1" style="background-color: #e9e8eb">
+      </colgroup>
+
+    <tr>
+        <th colspan="2"> Fill the form below</th>
+    </tr>
+    <form  action="mailto:eman.farag.r@gmail.com" method="GET">
+    <tr>
+      <th> <label for="name" >Name</label></th>
+      <th> <input type="text" id="name" name="name" value="" style="width:80%; padding: 1%;"></th>
+    </tr>
+    <tr>
+         <th><label for="pwd">Password</label></th>
+         <td> 
+            <input type="password" id="pwd" name="pwd" style="width:80%; padding: 1%;"></td>
+    </tr>
+    <tr>
+        <th>Feedback</th>
+        <td><textarea name="message" rows="10" cols="40">
+
+            </textarea></td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td><input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label></td>
+    </tr>
+    <tr>
+        <th>Subject</th>
+        <td> <input type="checkbox" id="subject1" name="subject1" value="Web">
+            <label for="subject1"> Web</label>
+            <input type="checkbox" id="subject2" name="subject2" value="Math">
+            <label for="subject2"> Math</label>
+            <input type="checkbox" id="subject3" name="subject3" value="Graphics">
+            <label for="subject3"> Graphics</label>
+            <input type="checkbox" id="subject4" name="subject4" value="English">
+            <label for="subject4"> English</label></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td> <input type="reset" value="Reset All" style="font-weight: bold;margin-right: 20px; padding: 2%;"> <input type="submit" value="Submit Above Details" style="font-weight: bold; padding: 2%;"></td>
+    </tr>
+</form>
+</table>
+</body>
+</html>
