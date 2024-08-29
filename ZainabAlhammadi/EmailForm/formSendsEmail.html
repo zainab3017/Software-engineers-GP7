@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        /* Style input fields and the textarea */
+        input[type="text"], input[type="password"], textarea {
+            width: 70%;
+            padding: 2px;
+        }
+
+        /* Style radio buttons and checkboxes */
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Style the submit and reset buttons */
+        input[type="submit"], input[type="reset"] {
+            padding: 1px 10px;
+            margin-top: 1px;
+        }
+
+        /* Center the content of cells that span across two columns */
+        td[colspan="2"] {
+            text-align: center;
+        }
+    </style>
+    <title>27th of Aug Assignment</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("r3Tk_03QCTI5urdX7");
+        })();
+    </script>
+</head>
+<body>
+
+    <form id="contact-form">
+        <table>
+            <!-- Row for the form title spanning two columns -->
+            <tr>
+                <th colspan="2">Fill the form below</th>
+            </tr>
+            <!-- Row for Name input -->
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <!-- Row for Password input -->
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <!-- Row for Feedback textarea -->
+            <tr>
+                <td>Feedback</td>
+                <td><textarea name="feedback" rows="4"></textarea></td>
+            </tr>
+            <!-- Row for Gender selection using radio buttons -->
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <!-- Row for Subject selection using checkboxes -->
+            <tr>
+                <td>Subject</td>
+                <td>
+                    <input type="checkbox" name="subject" value="web">Web
+                    <input type="checkbox" name="subject" value="math">Math
+                    <input type="checkbox" name="subject" value="graphics">Graphics
+                    <input type="checkbox" name="subject" value="english">English
+                </td>
+            </tr>
+            <!-- Row for the reset and submit buttons spanning two columns -->
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="Reset All">
+                    <input type="submit" value="Submit Above Details">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
