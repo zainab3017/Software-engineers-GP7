@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <title>Simple HTML Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Example</title>
     <style>
-        /* This is a class selector that styles the container div */
         .container {
             width: 80%;
             margin: 0 auto;
-            padding: 10px;
-            background-color: #e0e0e0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
 
-        /* This class styles the header div */
         .header {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
             color: #333;
         }
 
-        /* This class styles the content div */
         .content {
-            font-size: 14px;
-            color: #555;
+            font-size: 16px;
+            color: #666;
         }
 
-        /* This id selector styles a specific paragraph */
         #highlight {
-            color: #ff5722;
+            color: #d9534f;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- This div acts as a container for the entire content -->
     <div class="container">
-        
-        <!-- This div is styled as a header -->
-        <div class="header">My Simple Web Page</div>
-        
-        <!-- This div contains the main content of the page -->
+        <div class="header">Welcome to My Website</div>
         <div class="content">
-            <p>Welcome to my website. This is a simple example using <span>div</span>, <span>span</span>, <span>id</span>, and <span>class</span> in HTML.</p>
-            <p id="highlight">This paragraph is styled using an ID.</p>
+            <p>This is a simple example of using <span class="highlight">HTML</span> elements like <code>div</code>, <code>span</code>, <code>id</code>, and <code>class</code>.</p>
+            <p id="highlight">This paragraph has a special highlight using an ID.</p>
         </div>
-        
     </div>
 </body>
 </html>
