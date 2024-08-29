@@ -3,108 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Page Example</title>
+    <title>Portfolio Example</title>
     <style>
-        /* Style for the entire page container */
-        .page-container {
-            display: flex;
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fafafa;
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
         }
 
-        /* Sidebar styling */
-        .sidebar {
-            width: 25%;
-            padding: 15px;
-            background-color: #f0f0f0;
-            border-right: 1px solid #ddd;
+        /* Navigation bar styling */
+        #navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        #navbar a:hover {
+            background-color: #575757;
         }
 
         /* Main content area styling */
-        .content-area {
-            width: 75%;
-            padding: 20px;
+        .section {
+            padding: 60px 20px;
+            margin-top: 50px;
         }
 
-        /* Header of the content */
-        .content-header {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 15px;
+        /* Section-specific styles using id */
+        #about {
+            background-color: #e0f7fa;
         }
 
-        /* Paragraph styling */
-        .content-text {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
+        #portfolio {
+            background-color: #fff3e0;
         }
 
-        /* Specific highlight using id */
-        #important-note {
-            background-color: #ffeb3b;
-            padding: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* Styling for highlighted words using span */
-        .highlight {
-            color: #d9534f;
-            font-weight: bold;
+        #contact {
+            background-color: #fce4ec;
         }
 
         /* Footer styling */
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #777;
+        #footer {
+            background-color: #333;
+            color: white;
             text-align: center;
+            padding: 20px;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <!-- Main container for the page -->
-    <div class="page-container">
 
-        <!-- Sidebar section -->
-        <div class="sidebar">
-            <h3>Blog Categories</h3>
-            <ul>
-                <li><a href="#tech">Tech</a></li>
-                <li><a href="#lifestyle">Lifestyle</a></li>
-                <li><a href="#travel">Travel</a></li>
-                <li><a href="#food">Food</a></li>
-            </ul>
+    <!-- Navigation bar with in-page links -->
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Home section -->
+    <div id="home" class="section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and get to know me better.</p>
+        <a href="#contact" class="btn" onclick="highlightContact()">Contact Me</a>
+    </div>
+
+    <!-- About section -->
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with experience in creating dynamic and responsive websites.</p>
+        <p>My skills include HTML, CSS, JavaScript, and more.</p>
+    </div>
+
+    <!-- Portfolio section -->
+    <div id="portfolio" class="section">
+        <h2>My Work</h2>
+        <p>Check out some of my projects:</p>
+        <ul>
+            <li><a href="#project1" onclick="highlightProject('project1')">Project 1</a></li>
+            <li><a href="#project2" onclick="highlightProject('project2')">Project 2</a></li>
+            <li><a href="#project3" onclick="highlightProject('project3')">Project 3</a></li>
+        </ul>
+
+        <!-- Individual project sections with unique ids -->
+        <div id="project1" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffecb3;">
+            <h3>Project 1: Website Redesign</h3>
+            <p>A comprehensive redesign of a corporate website to enhance user experience and accessibility.</p>
         </div>
 
-        <!-- Main content area -->
-        <div class="content-area">
-            <div class="content-header">Understanding HTML Elements</div>
-
-            <p class="content-text">
-                HTML is the standard markup language for creating web pages. It stands for HyperText Markup Language and is the cornerstone of web development.
-                Elements like <span class="highlight">div</span>, <span class="highlight">span</span>, <span class="highlight">id</span>, and <span class="highlight">class</span> are foundational to creating structured and styled web content.
-            </p>
-
-            <p class="content-text" id="important-note">
-                Note: It's essential to understand how these elements work together to create accessible and well-organized web pages.
-            </p>
-
-            <p class="content-text">
-                For example, the <span class="highlight">div</span> element is used as a container to group other elements, while the <span class="highlight">span</span> element is used to apply styles to inline text.
-                The <span class="highlight">id</span> attribute provides a unique identifier for an element, and the <span class="highlight">class</span> attribute allows multiple elements to share the same styling.
-            </p>
+        <div id="project2" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffe0b2;">
+            <h3>Project 2: E-commerce Platform</h3>
+            <p>Development of a robust e-commerce platform with integrated payment systems.</p>
         </div>
 
+        <div id="project3" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffd54f;">
+            <h3>Project 3: Mobile App Development</h3>
+            <p>Creation of a cross-platform mobile application for managing personal finances.</p>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>If you would like to work together, feel free to reach out!</p>
+        <p>Email: example@example.com</p>
     </div>
 
     <!-- Footer section -->
-    <div class="footer">
-        &copy; 2024 My Blog. All rights reserved.
+    <div id="footer">
+        &copy; 2024 My Portfolio. All rights reserved.
     </div>
+
+    <!-- JavaScript to interact with specific elements by id -->
+    <script>
+        // Function to highlight the contact section when button is clicked
+        function highlightContact() {
+            var contactSection = document.getElementById('contact');
+            contactSection.style.backgroundColor = '#ffcccb';
+            setTimeout(function() {
+                contactSection.style.backgroundColor = '#fce4ec'; // Reset to original color
+            }, 3000);
+        }
+
+        // Function to highlight a specific project section when a link is clicked
+        function highlightProject(projectId) {
+            var project = document.getElementById(projectId);
+            project.style.border = '2px solid #007bff';
+            setTimeout(function() {
+                project.style.border = 'none'; // Remove the border after 3 seconds
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
