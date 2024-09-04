@@ -3,31 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Example</title>
+    <title>Advanced HTML Example</title>
     <style>
+        /* Styles for the container div */
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f4f4f4;
         }
+
+        /* Styles for the header section */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for a section with a specific class */
+        .content-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+        }
+
+        /* Styles for highlighted text within a section */
         .highlight {
-            color: red;
+            background-color: #ffeb3b;
             font-weight: bold;
+            padding: 0 5px;
         }
-        #unique-element {
-            background-color: yellow;
+
+        /* Styles for the unique element identified by ID */
+        #unique-section {
+            padding: 15px;
+            background-color: #d1e7dd;
+            border: 1px solid #b3d9b1;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        /* Styles for buttons within the unique section */
+        #unique-section .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #unique-section .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
+    <!-- Main container for the webpage content -->
     <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is a <span class="highlight">highlighted</span> text inside a div.</p>
-        <div id="unique-element">
-            This is a unique element with a specific ID.
+        
+        <!-- Header section -->
+        <div class="header">
+            <h1>Welcome to My Advanced HTML Example</h1>
         </div>
+        
+        <!-- Content section with a class for styling -->
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>This section demonstrates <span class="highlight">highlighted text</span> using the <code>&lt;span&gt;</code> element within a <code>&lt;div&gt;</code> with a class.</p>
+        </div>
+
+        <!-- Unique section with specific ID -->
+        <div id="unique-section">
+            <h2>Special Features</h2>
+            <p>This section has unique styles applied via its <code>id</code> attribute.</p>
+            <a href="#" class="btn">Learn More</a>
+            <a href="#" class="btn">Contact Us</a>
+        </div>
+
     </div>
 
 </body>
