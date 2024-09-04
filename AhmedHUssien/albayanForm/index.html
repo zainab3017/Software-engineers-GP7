@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course/Diploma Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- This is the form container -->
+    <div class="form-container">
+        <div class="logo"></div> <!--Logo of the organization-->
+        <!-- Form starts here -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <h2>Course/Diploma Form</h2>
+            <input type="hidden" name="access_key" value="c3c61d50-d001-4585-9d44-0e94685b7119">
+            <div class="section">
+            <!-- Personal Details section that include some inputs with labels -->
+                <h3>Personal Details</h3>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col">
+                        <label for="fullName">Full Name</label>
+                        <input name="fullName" type="text" id="fullName" placeholder="Enter Your name" required>
+                    </div>
+                    <div class="col">
+                        <label for="dob">Date of Birth</label>
+                        <input name="date" type="date" id="dob" placeholder="dd/mm/yyyy" required>
+                    </div>
+                </div>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col">
+                        <label for="phone">Phone Number</label>
+                        <div class="phone-number-input">
+                            <select name="country-code" id="country-code" required>
+                                <option value="+971">+971 (UAE)</option>
+                                <!-- Add more country codes as needed -->
+                                <option value="+1">+1 (USA)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <!-- ... -->
+                            </select>
+                            <input name="phone" type="text" id="phone" placeholder="Enter Your Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" id="email" placeholder="Enter Your email" required>
+                    </div>
+                </div>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="qualification">Highest Qualification</label>
+                        <select name="qualification" id="qualification" required>
+                            <option value="">Select Qualification</option>
+                            <option value="highschool">High School</option>
+                            <option value="diploma">Diploma's Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--Technical and Practical section that include some inputs with labels-->
+            <div class="section">
+                <h3>Technical and Practical Details</h3>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col-full">
+                        <label for="skills">Current Skills</label>
+                        <textarea name="skills" id="skills" placeholder="Enter your skills" required></textarea>
+                    </div>
+                </div>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col"> 
+                        <label for="os">Operating System</label>
+                        <select name="os" id="os" required>
+                            <option value="">Select Your Operating System</option>
+                            <option value="windows">Windows</option>
+                            <option value="mac">MacOS</option>
+                            <option value="linux">Linux</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="internet">Internet Speed</label>
+                        <input type="text" id="internet" placeholder="0 Mbps" required>
+                    </div>
+                </div>
+                <div class="row"> <!--IN ROWS (the parts of the section is in the row)-->
+                    <div class="col">
+                        <label for="laptop">Laptop Availability</label>
+                        <select name="laptop" id="laptop" required>
+                            <option value="">Select...</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="commitment">Commitment to Assignment</label>
+                        <select name="commitment" id="commitment" required>
+                            <option value="">Select...</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--terms and privacy inputs-->
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms and Conditions.</a></label><br>
+                <input type="checkbox" id="privacy" required>
+                <label for="privacy">I agree to the <a href="#">Privacy Policy.</a></label>
+            </div>
+            <!--submit button-->
+            <div class="submit-button">
+                <button type="submit" onclick="submitForm()">Submit</button>
+            </div>
+
+            <div class="CopyRight">
+                <p>&#169 2024 Ebrahim Adel Almahbosh </p>
+                <p>&#169 2024 Assignment of software Course</p>
+
+            </div>
+
+            <div id="result"></div>
+        </form>
+    </div>
+
+    <!-- JavaScript for form validation in script.js file-->
+    <script src="script.js">
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var termsCheckbox = document.getElementById('terms');
+            var privacyCheckbox = document.getElementById('privacy');
+        
+            if (!termsCheckbox.checked || !privacyCheckbox.checked) {
+                event.preventDefault();
+                alert('Please agree to the Terms and Conditions and Privacy Policy.');
+            }
+        });
+    </script>
+</body>
+</html>

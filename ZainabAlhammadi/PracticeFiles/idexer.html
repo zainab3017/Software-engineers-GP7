@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Example</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation bar styling */
+        #navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        #navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content area styling */
+        .section {
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+
+        /* Section-specific styles using id */
+        #about {
+            background-color: #e0f7fa;
+        }
+
+        #portfolio {
+            background-color: #fff3e0;
+        }
+
+        #contact {
+            background-color: #fce4ec;
+        }
+
+        /* Footer styling */
+        #footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar with in-page links -->
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Home section -->
+    <div id="home" class="section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and get to know me better.</p>
+        <a href="#contact" class="btn" onclick="highlightContact()">Contact Me</a>
+    </div>
+
+    <!-- About section -->
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with experience in creating dynamic and responsive websites.</p>
+        <p>My skills include HTML, CSS, JavaScript, and more.</p>
+    </div>
+
+    <!-- Portfolio section -->
+    <div id="portfolio" class="section">
+        <h2>My Work</h2>
+        <p>Check out some of my projects:</p>
+        <ul>
+            <li><a href="#project1" onclick="highlightProject('project1')">Project 1</a></li>
+            <li><a href="#project2" onclick="highlightProject('project2')">Project 2</a></li>
+            <li><a href="#project3" onclick="highlightProject('project3')">Project 3</a></li>
+        </ul>
+
+        <!-- Individual project sections with unique ids -->
+        <div id="project1" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffecb3;">
+            <h3>Project 1: Website Redesign</h3>
+            <p>A comprehensive redesign of a corporate website to enhance user experience and accessibility.</p>
+        </div>
+
+        <div id="project2" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffe0b2;">
+            <h3>Project 2: E-commerce Platform</h3>
+            <p>Development of a robust e-commerce platform with integrated payment systems.</p>
+        </div>
+
+        <div id="project3" class="project" style="padding: 10px; margin-top: 20px; background-color: #ffd54f;">
+            <h3>Project 3: Mobile App Development</h3>
+            <p>Creation of a cross-platform mobile application for managing personal finances.</p>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>If you would like to work together, feel free to reach out!</p>
+        <p>Email: example@example.com</p>
+    </div>
+
+    <!-- Footer section -->
+    <div id="footer">
+        &copy; 2024 My Portfolio. All rights reserved.
+    </div>
+
+    <!-- JavaScript to interact with specific elements by id -->
+    <script>
+        // Function to highlight the contact section when button is clicked
+        function highlightContact() {
+            var contactSection = document.getElementById('contact');
+            contactSection.style.backgroundColor = '#ffcccb';
+            setTimeout(function() {
+                contactSection.style.backgroundColor = '#fce4ec'; // Reset to original color
+            }, 3000);
+        }
+
+        // Function to highlight a specific project section when a link is clicked
+        function highlightProject(projectId) {
+            var project = document.getElementById(projectId);
+            project.style.border = '2px solid #007bff';
+            setTimeout(function() {
+                project.style.border = 'none'; // Remove the border after 3 seconds
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

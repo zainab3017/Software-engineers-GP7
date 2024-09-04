@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Example</title>
     <style>
+        /* Style for the container div, centering the content and giving it some padding and background color */
         .container {
             width: 80%;
             margin: 0 auto;
@@ -12,17 +13,20 @@
             background-color: #f4f4f4;
         }
 
+        /* Style for the header div, making the text larger, bold, and darker */
         .header {
             font-size: 24px;
             font-weight: bold;
             color: #333;
         }
 
+        /* Style for the content div, making the text slightly smaller and a lighter color */
         .content {
             font-size: 16px;
             color: #666;
         }
 
+        /* Style for the element with the id "highlight", making the text red and bold */
         #highlight {
             color: #d9534f;
             font-weight: bold;
@@ -30,12 +34,22 @@
     </style>
 </head>
 <body>
+    <!-- This div wraps the entire content of the page and applies the "container" class styles -->
     <div class="container">
+        
+        <!-- This div is used for the header/title of the page and applies the "header" class styles -->
         <div class="header">Welcome to My Website</div>
+        
+        <!-- This div contains the main content of the page and applies the "content" class styles -->
         <div class="content">
+            <!-- A paragraph showing an example of using span, div, id, and class elements -->
             <p>This is a simple example of using <span class="highlight">HTML</span> elements like <code>div</code>, <code>span</code>, <code>id</code>, and <code>class</code>.</p>
+            
+            <!-- A paragraph with a special highlight applied using the "highlight" id -->
             <p id="highlight">This paragraph has a special highlight using an ID.</p>
         </div>
+        
     </div>
+    
 </body>
 </html>
