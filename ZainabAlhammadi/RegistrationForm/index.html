@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+
+        .terms {
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row .col {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .row .col:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="col">
+                    <input type="text" id="middle_name" name="middle_name" placeholder="Middle Name">
+                </div>
+                <div class="col">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(050) 123-4567" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Street Address, Home Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="birth_date">Birth Date</label>
+            <div class="row">
+                <div class="col">
+                    <select id="month" name="month">
+                        <option value="">Month</option>
+                        <!-- Month options here -->
+                    </select>
+                </div>
+                <div class="col">
+                    <select id="day" name="day">
+                        <option value="">Day</option>
+                        <!-- Day options here -->
+                    </select>
+                </div>
+                <div class="col">
+                    <select id="year" name="year">
+                        <option value="">Year</option>
+                        <!-- Year options here -->
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="">Please Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Select Your Course</label>
+            <select id="course" name="course">
+                <option value="">Please Select</option>
+                <option value="cyber_security">Training Diploma in Cyber Security</option>
+                <option value="digital_transformation">Diploma in Data and Digital Transformation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="start_date">Preferred Start Date</label>
+            <input type="date" id="start_date" name="start_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="session_time">Preferred Time for Online Sessions</label>
+            <select id="session_time" name="session_time">
+                <option value="">Please Select</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="training_days">Preferred Training Days</label>
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" id="tue_thu" name="training_days" value="Tuesday and Thursday">
+                    <label for="tue_thu">Tuesday and Thursday</label>
+                </div>
+                <div class="col">
+                    <input type="checkbox" id="mon_wed" name="training_days" value="Monday and Wednesday">
+                    <label for="mon_wed">Monday and Wednesday</label>
+                </div>
+                <div class="col">
+                    <input type="checkbox" id="sat_sun" name="training_days" value="Saturday and Sunday">
+                    <label for="sat_sun">Saturday and Sunday</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#">terms & conditions</a>.</label>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

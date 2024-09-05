@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        /* Style input fields and the textarea */
+        input[type="text"], input[type="password"], textarea {
+            width: 70%; /* Width of input and textarea */
+            padding: 2px;
+        }
+
+        /* Style radio buttons and checkboxes */
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Style submit and reset buttons */
+        input[type="submit"], input[type="reset"] {
+            padding: 1px 10px;
+            margin-top: 1px;
+        }
+
+        /* Center content for cells that span two columns */
+        td[colspan="2"] {
+            text-align: center;
+        }
+    </style>
+    <title>27th of Aug Assignment</title>
+</head>
+<body>
+
+    <form method="POST" action="send_email.php">
+        <table>
+            <!-- Form title spanning two columns -->
+            <tr>
+                <th colspan="2">Fill the form below</th>
+            </tr>
+            <!-- Name input -->
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <!-- Password input -->
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <!-- Feedback textarea -->
+            <tr>
+                <td>Feedback</td>
+                <td><textarea name="feedback" rows="4"></textarea></td>
+            </tr>
+            <!-- Gender selection using radio buttons -->
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <!-- Subject selection using checkboxes -->
+            <tr>
+                <td>Subject</td>
+                <td>
+                    <input type="checkbox" name="subject[]" value="web">Web
+                    <input type="checkbox" name="subject[]" value="math">Math
+                    <input type="checkbox" name="subject[]" value="graphics">Graphics
+                    <input type="checkbox" name="subject[]" value="english">English
+                </td>
+            </tr>
+            <!-- Reset and submit buttons -->
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="Reset All">
+                    <input type="submit" value="Submit Above Details">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

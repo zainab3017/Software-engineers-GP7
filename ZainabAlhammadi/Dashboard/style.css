@@ -1,0 +1,57 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#addWidgetBtn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.widget-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 300px;
+    background-color: #f9f9f9;
+}
+
+.widget {
+    width: 200px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: move;
+    padding: 10px;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.remove-widget {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.widget-content {
+    text-align: center;
+}
