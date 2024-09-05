@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ADD8E6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 670px;
+    width: 100%;
+    position: relative;
+    padding-top: 90px; 
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 100px;
+    height: 70px;
+    background-image: url('img/AlbyanLogo\ \(2\).png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+h2 {
+    text-align: center;
+    color: #3b5998;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.col, .col-full {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.phone-number-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone-number-input select {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .phone-number-input input[type="text"] {
+    flex-grow: 1;
+  }
+
+  .phone-number-input select,
+  .phone-number-input input[type="text"] {
+    height: 38px;
+  }
+
+
+textarea {
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: 1px solid #3b5998;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #3d82bb;
+    color: #ffffff;
+    transform: scale(1.05); /* Add a small scale transformation */
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #495057;
+}
+
+.alert-success {
+    border-color: #45b34b;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+.CopyRight{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+@media (max-width: 510px) {
+    .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 80%;
+        position: relative;
+        padding-top: 80px; 
+    }
+    .logo{
+        width: 80px;
+        height: 70px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    input {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    select {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+    .phone-number-input {
+        display: flex;
+        align-items: center;
+      }
+      
+      .phone-number-input select {
+        width: auto;
+        margin-right: 10px;
+        padding-left: 0;
+      }
+      
+      .phone-number-input input[type="text"] {
+        flex-grow: 1;
+      }
+    
+      .phone-number-input select,
+      .phone-number-input input[type="text"] {
+        height: 38px;
+        font-size: 10px;
+        padding-left: 5px;
+      }
+    
+    
+    textarea {
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    
+    button[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 8px 18px;
+        border: 1px solid #3b5998;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    }
+
+    button[type="submit"]:hover {
+        background-color: #3d82bb;
+        color: #ffffff;
+        transform: scale(1.05); /* Add a small scale transformation */
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .form-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 80%;
+        position: relative;
+        padding-top: 80px; 
+    }
+
+       
+    button[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 8px 18px;
+        border: 1px solid #3b5998;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    }
+
+    button[type="submit"]:hover {
+        background-color: #3d82bb;
+        color: #ffffff;
+        transform: scale(1.05); /* Add a small scale transformation */
+    }
+}
+
+@media (max-width:420px) {
+    h2 {
+        font-size: 12px;
+    }
+    .logo{
+        width: 60px;
+        height: 50px;
+    }
+    h3 {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    label {
+        font-size: 10px;
+        font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    textarea {
+        padding: 5px 4px;
+        width: 100%;
+        box-sizing: border-box;
+        height: 50px;
+        font-size: 8px;
+    }
+    button[type="submit"] {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding: 7px 16px;
+        border: 1px solid #3b5998;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 10px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    }
+
+    button[type="submit"]:hover {
+        background-color: #3d82bb;
+        color: #ffffff;
+        transform: scale(1.05); /* Add a small scale transformation */
+    }
+
+    .checkbox-group label {
+        font-size: 9px;
+        font-weight: 600;
+    }
+
+    input[type="checkbox"] {
+        margin-top: 10px;
+    }
+}
