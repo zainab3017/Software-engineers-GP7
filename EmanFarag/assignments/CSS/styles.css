@@ -1,0 +1,27 @@
+.banner{
+    background-color: #F4C2C2;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    display: contents;
+    width: 90%;
+    height: 90px;
+    position: absolute;
+    transform: translate(20%, 10%);
+}
+
+.PicBackground{
+
+       width: 70px;
+       height: 40px;
+       position: absolute;
+        transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
