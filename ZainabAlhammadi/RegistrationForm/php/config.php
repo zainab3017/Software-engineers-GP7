@@ -12,10 +12,10 @@ define('PASSWORD', "bvricfmombchkcia");
 define('SEND_FROM', "zainab3017@gmail.com");
  
 // Define the name of the website from which the email is sent. 
-define('SEND_FROM_NAME', "AIBYAN");
+define('SEND_FROM_NAME', "ALBYAN");
  
 // Define the reply-to address.
 define('REPLY_TO', "zainab3017@gmail.com");
  
 // Define the reply-to name.
-define('REPLY_TO_NAME', "AIBYAN");
+define('REPLY_TO_NAME', "ALBYAN");
