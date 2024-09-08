@@ -5,7 +5,7 @@
     align-items: center;
 }
 img{
-    display: contents;
+    display: inline;
     width: 90%;
     height: 90px;
     position: absolute;
