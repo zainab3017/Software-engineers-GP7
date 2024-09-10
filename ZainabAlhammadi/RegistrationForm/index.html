@@ -31,6 +31,7 @@
       <main>
         <!-- Form -->
         <section class="form">
+          <!-- Form Header -->
           <div class="form-header">
             <h2 class="form-header-title">
               Department of Information Technology
@@ -42,13 +43,16 @@
               </p>
             </div>
           </div>
+          <!-- Registration form starts -->
           <form
             class="form-body"
             action="php/form-process.php"
             method="post"
             enctype="multipart/form-data"
           >
+          <!-- Personal Information Section -->
             <div class="form-section">
+              <!-- Full Name -->
               <div class="form-group">
                 <label for="first-name" class="form-label"
                   >Name
@@ -92,6 +96,7 @@
                   This field is required.
                 </div>
               </div>
+              <!-- Email and Phone Number -->
               <div class="form-group">
                 <div class="form-group-extended">
                   <div class="form-control flex-control">
@@ -106,6 +111,7 @@
                       id="email"
                     />
                     <span class="form-helper-text">example@example.com</span>
+                    <!-- Error message if email not filled -->
                     <div class="form-error" id="email-group-error">
                       <img
                         class="form-error-image"
@@ -130,6 +136,7 @@
                       >Please enter a valid phone number.(ex (050)
                       123-4567)</span
                     >
+                     <!-- Error message if phone number not filled -->
                     <div class="form-error" id="phone-group-error">
                       <img
                         class="form-error-image"
@@ -141,6 +148,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Address Section -->
               <div class="form-group">
                 <label for="street-home-addrees" class="form-label"
                   >Address
@@ -176,6 +184,7 @@
                     />
                     <span class="form-helper-text">City</span>
                   </div>
+                  <!-- Country -->
                   <div class="form-control">
                     <select
                       name="country"
@@ -529,6 +538,7 @@
                   This field is required.
                 </div>
               </div>
+              <!-- Birth Day  -->
               <div class="form-group">
                 <label for="month" class="form-label"
                   >Birth Date
@@ -686,6 +696,7 @@
                   This field is required.
                 </div>
               </div>
+                <!-- Gender -->
               <div class="form-group">
                 <label for="gender" class="form-label"
                   >Gender
@@ -697,7 +708,6 @@
                       <option value="">Please Select</option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
-                      <option value="other">Other</option>
                     </select>
 
                     <img
@@ -717,8 +727,11 @@
                 </div>
               </div>
             </div>
+             <!-- Divider Line -->
             <div class="form-line"></div>
+            <!-- Course Information Section -->
             <div class="form-section">
+              <!-- Course Selection -->
               <div class="form-group">
                 <div class="form-group-extended">
                   <div class="form-control flex-control">
