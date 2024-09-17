@@ -1,23 +1,32 @@
 body {
+    /* Sets the height to full screen */
     height: 100%;
+    /* Sets a white background color */
     background: white;
+    /* Creates a linear gradient background with a light blue at the top and white */
     background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
     background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
     background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+    /* Specifies the background size */
     -webkit-background-size: 100% 30px;
     -moz-background-size: 100% 30px;
     -ms-background-size: 100% 30px;
     background-size: 100% 30px;
+    /* Sets the font family */
     font-family: Arial, Helvetica, sans-serif;
+    /* Removes padding and margin from the body */
     padding: 0;
     margin: 0;
 }
 
 input[type=checkbox]::after {
+    /* Adds content after the checkbox input */
     content: '';
+    /* Sets the display to inline-block and the size of the checkbox */
     display: inline-block;
     width: 12px;
     height: 12px;
+    /* Sets the background color and border for the checkbox */
     background: #fff;
     border-radius: 4px;
     color: #677278;
@@ -28,88 +37,113 @@ input[type=checkbox]::after {
 }
 
 input[type=checkbox]:checked::after {
+    /* Adds a checkmark after the checkbox when it's checked */
     content: '✓';
+    /* Centers the checkmark inside the checkbox */
     text-align: center;
 }
 
 input[type=checkbox]:focus::after {
+    /* Changes the border color when the checkbox is focused */
     border-color: #677278;
 }
 
 input[type=checkbox]:disabled::after {
+    /* Sets a different background color when the checkbox is disabled */
     background: #E3E3E3;
 }
 
 #gridContainer {
+    /* Defines a grid layout with two columns */
     display: grid;
     grid-template-columns: 65px 1fr;
+    /* Sets the height of the grid to full screen */
     height: 100vh;
+    /* Defines a single row of 111px */
     grid-template-rows: 111px;
 }
 
 #gridContainer div:nth-child(odd) {
+    /* Adds a border to every odd div inside the gridContainer */
     border-right: 1px solid #F8D3D3;
 }
 
 div.topMargin {
+    /* Sets the background of the div to white */
     background: #fff;
 }
 
 #listName {
+    /* Sets a high z-index to ensure this div appears on top of other elements */
     z-index: 10;
+    /* Sets the background color to white */
     background: #fff;
+    /* Sets the height of the element */
     height: 100px;
+    /* Removes margin and sets text overflow handling */
     margin: 0;
     text-overflow: ellipsis;
 }
 
 #listName h1 {
+    /* Adds top margin to the header */
     margin-top: 40px;
+    /* Adds left margin to the header */
     margin-left: 15px;
 }
 
 #listName p {
+    /* Sets font size and style for paragraph inside #listName */
     font-size: 0.7em;
     font-style: italic;
+    /* Adds left margin */
     margin-left: 5px;
 }
 
 #content {
+    /* Adds top margin and padding */
     margin-top: 7px;
     padding: 0;
+    /* Sets font properties for the content */
     font: 16px 'AmericanTypewriter', Cambria, Georgia;
     color: #282625;
 }
 
 h2 {
+    /* Removes margin and adds padding to headers */
     margin: 0;
     padding: 2px 0 1px;
 }
 
 ol {
+    /* Adds padding and removes margin for ordered lists */
     padding-left: 42px;
     margin: 0;
 }
 
 ol li {
+    /* Sets padding, font size, and left margin for list items */
     padding: 0px;
     font-size: 25px;
     margin-left: 6px;
 }
 
 ol li a {
+    /* Sets smaller font size for links inside list items */
     font-size: 0.5em;
     vertical-align: middle;
 }
 
 ol li p {
+    /* Sets font size, weight, margin, and alignment for paragraphs inside list items */
     font-size: 0.7em;
     font-weight: bold;
     margin: 15px 50px;
     vertical-align: middle;
 }
 
-div.codeBlock, textarea,code.codeBlock {
+div.codeBlock, textarea, code.codeBlock {
+    /* Defines the layout, size, and appearance of code blocks */
     width: 80%;
     display: block;
     font-size: 0.6em;
@@ -121,24 +155,29 @@ div.codeBlock, textarea,code.codeBlock {
     box-shadow: 2px 2px 10px #333;
 }
 
-div.codeBlock span, textarea,code.codeBlock span {
+div.codeBlock span, textarea, code.codeBlock span {
+    /* Ensures long text wraps within the block */
     word-break: break-word;
 }
 
 div.PS, textarea.PS, code.PS {
+    /* Styling for PS-specific blocks */
     background: #012456;
     color: #eeedf0;
 }
 
 div.CMD, textarea.CMD, code.CMD {
+    /* Styling for CMD-specific blocks */
     color: #eeedf0;
 }
 
 ol li span {
+    /* Adds smooth opacity transition for spans inside list items */
     transition: opacity .5s ease-in-out;
 }
 
 .strikethrough {
+    /* Styles for strikethrough text effect */
     display: inline;
     position: relative;
     opacity: 0.5;
@@ -146,6 +185,7 @@ ol li span {
 }
 
 .strikethrough:after {
+    /* Creates the strikethrough line effect */
     content: '';
     position: absolute;
     display: block;
@@ -161,16 +201,17 @@ ol li span {
 }
 
 @keyframes strikethrough {
+    /* Defines the animation for the strikethrough effect */
     from {
         transform: scaleX(0);
     }
-
     to {
         transform: scaleX(1);
     }
 }
 
 input.copy-text {
+    /* Styles for the text input next to checkbox */
     position: absolute;
     vertical-align: text-top;
     height: 14px;
@@ -180,34 +221,35 @@ input.copy-text {
 }
 
 span.copy-animation {
+    /* Adds animation for copy action */
     animation: textSelect 0.75s linear;
 }
 
 span.copy-animation-ps {
+    /* Adds animation for PS-specific copy action */
     animation: textSelectPS 0.75s linear;
 }
 
 span.copy-animation-cmd {
+    /* Adds animation for CMD-specific copy action */
     animation: textSelectCMD 0.75s linear;
 }
 
 @keyframes textSelect {
+    /* Animation for text selection */
     0% {
         background-color: #000;
         color: #0f0;
     }
-
     30% {
         background: #0f0;
         color: #000;
         box-shadow: inset 100px 0 0 0 #0f0;
     }
-
     70% {
         background: #0f0;
         color: #000;
     }
-
     100% {
         background-color: #000;
         color: #0f0;
@@ -215,22 +257,20 @@ span.copy-animation-cmd {
 }
 
 @keyframes textSelectPS {
+    /* Animation for PS-specific text selection */
     0% {
         background-color: #012456;
         color: #eeedf0;
     }
-
     30% {
         background: #eeedf0;
         color: #012456;
         box-shadow: inset 100px 0 0 0 #eeedf0;
     }
-
     70% {
         background: #eeedf0;
         color: #012456;
     }
-
     100% {
         background-color: #012456;
         color: #eeedf0;
@@ -238,22 +278,20 @@ span.copy-animation-cmd {
 }
 
 @keyframes textSelectCMD {
+    /* Animation for CMD-specific text selection */
     0% {
         background-color: #000;
         color: #eeedf0;
     }
-
     30% {
         background: #eeedf0;
         color: #000;
         box-shadow: inset 100px 0 0 0 #eeedf0;
     }
-
     70% {
         background: #eeedf0;
         color: #000;
     }
-
     100% {
         background-color: #000;
         color: #eeedf0;
@@ -261,19 +299,9 @@ span.copy-animation-cmd {
 }
 
 #footerLinks {
+    /* Centers the footer links */
     justify-self: center;
     padding-top: 15px;
 }
 
-#footerLinks img {
-    display: inline-block;
-    max-height: 50px;
-    opacity: 0.8;
-    justify-self: center;
-    margin: 5px;
-    transition: opacity 0.35s linear;
-}
-
-#footerLinks img:hover {
-    opacity: 1;
-}
+#footer
