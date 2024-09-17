@@ -304,4 +304,21 @@ span.copy-animation-cmd {
     padding-top: 15px;
 }
 
-#footer
+
+#footerLinks {
+    justify-self: center;
+    padding-top: 15px;
+}
+
+#footerLinks img {
+    display: inline-block;
+    max-height: 50px;
+    opacity: 0.8;
+    justify-self: center;
+    margin: 5px;
+    transition: opacity 0.35s linear;
+}
+
+#footerLinks img:hover {
+    opacity: 1;
+}
